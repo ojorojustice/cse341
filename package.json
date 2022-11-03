@@ -1,0 +1,26 @@
+{
+  "name": "cse341",
+  "version": "1.0.0",
+  "description": "Week 1 Personal Assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojorojustice/cse341.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ojorojustice/cse341/issues"
+  },
+  "homepage": "https://github.com/ojorojustice/cse341#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
