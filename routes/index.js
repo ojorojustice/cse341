@@ -5,14 +5,14 @@ const { getContacts } = require("../controllers/ContactControllers");
 const connectDB = require("../db/Connection");
 
 connectDB();
-routes.get("/", (req, res) => {
+routes.get("/contacts", (req, res) => {
   res.status(200).json({
     name: "Ojo RUFUS Olajide",
     age: 34,
   });
 });
 
-routes.get("/contacts", getContacts);
+routes.get("/", getContacts);
 
 //routes.put("/:id",putContacts);
 
