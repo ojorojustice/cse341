@@ -1,0 +1,30 @@
+
+@host = http://localhost:3000
+
+GET {{host}}/ http/1.1
+
+
+
+###
+POST {{host}}/post http/1.1
+Content-Type: application/json
+
+{
+"firstName":"Olajide",
+"lastName":"Macbeth",
+"email":"olajidemichael@yahoo.com",
+"favoriteColor":"Green",
+"birthday":"2004-4-12"
+}
+
+
+###
+DELETE {{host}}/delete/637fed120f783a962aea6a8b http/1.1
+
+
+###
+PUT {{host}}/post/ http/1.1
+Content-Type: application/json
+
+
+
