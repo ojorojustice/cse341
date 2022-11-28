@@ -19,12 +19,16 @@ Content-Type: application/json
 
 
 ###
-DELETE {{host}}/delete/637fed120f783a962aea6a8b http/1.1
+DELETE {{host}}/delete/6382a5c83ebb7dfb4c2945a0 http/1.1
 
 
 ###
-PUT {{host}}/post/ http/1.1
+PUT {{host}}/post/637ff78fa11b2dcc87546e39 http/1.1
 Content-Type: application/json
+
+{
+"firstName":"jide"
+    }
 
 
 
