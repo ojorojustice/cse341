@@ -94,25 +94,23 @@ routes.get('/getone/:id', getOneContacts);
 
 /**
  * @swagger
- * paths:
- *  /put/{id}:
- *    put:
- *      summary: This updates specific contacts
- *      parameters:
- *        - in: path
- *          name: id
- *          schema:
- *            type: string
- *          required: true
- *          description: the contacts id
- *      requestBody:
+ * /put/{id}:
+ *  put:
+ *    summary: This updates specific contacts
+ *    parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
  *        required: true
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *            items:
- *              type: object
+ *        description: the contacts id
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *            type: object
+ *            properties:
  *              firstName:
  *                type: string
  *              lastName:
@@ -123,81 +121,35 @@ routes.get('/getone/:id', getOneContacts);
  *                type: string
  *              birthday:
  *                type: string
- *      responses:
- *        '200':
- *          description: Updated Contacts.
- *          content:
- *            application/json:
- *              schema:
- *                type: array
- *              items:
- *                type: object
- *                firstName:
- *                  type: string
- *                lastName:
- *                  type: string
- *                email:
- *                  type: string
- *                favoriteColor:
- *                  type: string
- *                birthday:
- *                  type: string
+ *    responses:
+ *      200:
+ *        description: Updated Contacts
+ *      400:
+ *        description: The contact cannot be found
+ *      500:
+ *        description: server error
  */
 routes.put('/put/:id', putContacts);
 
-
 /**
  * @swagger
- * paths:
- *  /delete/{id}:
- *    delete:
- *      summary: This deletes specific contacts
- *      parameters:
- *        - in: path
- *          name: id
- *          schema:
- *            type: string
- *          required: true
- *          description: the contacts id
- *      requestBody:
+ * /delete/{id}:
+ *  delete:
+ *    summary: This deletes specific contacts
+ *    parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
  *        required: true
- *        content:
- *          application/json:
- *            schema:
- *              type: object
- *            items:
- *              type: object
- *              firstName:
- *                type: string
- *              lastName:
- *                type: string
- *              email:
- *                type: string
- *              favoriteColor:
- *                type: string
- *              birthday:
- *                type: string
- *      responses:
- *        '200':
- *          description: Updated Contacts.
- *          content:
- *            application/json:
- *              schema:
- *                type: array
- *              items:
- *                type: object
- *                firstName:
- *                  type: string
- *                lastName:
- *                  type: string
- *                email:
- *                  type: string
- *                favoriteColor:
- *                  type: string
- *                birthday:
- *                  type: string
+ *        description: the contacts id
+ *    responses:
+ *      200:
+ *        description: The contact has been deleted
+ *      400:
+ *        description: The contact cannot be found
  */
- routes.delete('/delete/:id', deleteContacts);
+routes.delete('/delete/:id', deleteContacts);
 
 /**
  * @swagger
